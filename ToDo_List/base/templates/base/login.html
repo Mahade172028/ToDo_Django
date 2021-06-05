@@ -1,0 +1,25 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<div class="header-bar">
+    <h1>Login Here</h1>
+    <a href="{% url 'todojs' %}">Without login mode</a>
+</div>
+
+<div class="card-body">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        
+        {{form.as_p}}
+        <input type="submit" value="Login">
+    </form>
+    
+    <h2>Don't have an account? <a href="{% url 'register' %}">Register</a></h2>
+
+
+</div>
+
+
+
+{% endblock %}

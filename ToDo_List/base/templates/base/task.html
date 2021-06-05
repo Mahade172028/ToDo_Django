@@ -1,0 +1,12 @@
+{% extends 'base/main.html' %}
+{% block content%}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#x2190;Go Back</a>
+</div>
+<div class="card-body">
+<h1 style="display: inline;">Title:{{task.title}}</h1>
+<h1>Description:</h1>
+<p>{{task.description}}</p>
+</div>
+{% endblock %}
